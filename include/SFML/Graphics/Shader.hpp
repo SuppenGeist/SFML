@@ -297,6 +297,15 @@ public:
     void setUniform(const std::string& name, float x);
 
     ////////////////////////////////////////////////////////////
+    /// \brief Specify value for \p float uniform
+    ///
+    /// \param name Name of the uniform variable in GLSL
+    /// \param x    Value of the float scalar
+    ///
+    ////////////////////////////////////////////////////////////
+    void setUniform(const std::string& name, double x);
+
+    ////////////////////////////////////////////////////////////
     /// \brief Specify value for \p vec2 uniform
     ///
     /// \param name   Name of the uniform variable in GLSL

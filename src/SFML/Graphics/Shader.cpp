@@ -430,6 +430,13 @@ void Shader::setUniform(const std::string& name, float x)
         glCheck(GLEXT_glUniform1f(binder.location, x));
 }
 
+////////////////////////////////////////////////////////////
+void Shader::setUniform(const std::string& name, double x)
+{
+    UniformBinder binder(*this, name);
+    if (binder.location != -1)
+        glCheck(glUniform1d(binder.location, x));
+}
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Vec2& v)
